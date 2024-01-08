@@ -5,8 +5,8 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import linear_kernel
 
 # Load the MovieLens dataset
-movies = pd.read_csv(r'C:\Users\OWOLABI\Downloads\MERISKILL\MERISKILL\BHARAT INTERN TASKS\Movie Recommendation System\movies1.csv')
-ratings = pd.read_csv(r'C:\Users\OWOLABI\Downloads\MERISKILL\MERISKILL\BHARAT INTERN TASKS\Movie Recommendation System\ratings1.csv')
+movies = pd.read_csv('movies1.csv')
+ratings = pd.read_csv('ratings1.csv')
 
 # Pivot the ratings DataFrame to create a user-item matrix
 user_item_matrix = ratings.pivot(index='userId', columns='movieId', values='rating').fillna(0)
